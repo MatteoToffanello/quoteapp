@@ -1,29 +1,84 @@
 <template>
-    <div id="form">
 
-        <h2>LOGIN</h2>
+    <div>
+        <div id="helper">
+            <img src="../assets/arrow_icon.png" alt="" class="arrow_icon">
+            Click here to go back
+        </div>
 
-        <label for="email">
-            EMAIL
-            <input type="email" name="email" id="email">
-        </label>
-        <label for="psw">
-            PASSWORD
-            <input type="password" name="psw" id="psw">
-        </label>
+        <div id="form">
 
-        <button id="login_btn">Log In</button>
+            <h2>LOGIN</h2>
 
+            <label for="email">
+                EMAIL
+                <input type="email" name="email" id="email">
+            </label>
+            <label for="psw">
+                PASSWORD
+                <input type="password" name="psw" id="psw">
+            </label>
+
+            <button id="login_btn">Log In</button>
+
+        </div>
     </div>
+
+    
 </template>
 
 <script>
+export default {
+    name: 'Login',
+    data() {
+        return {}
+    },
+    methods: { },
+    beforeMount() {
+        console.log("test");
+        setTimeout(() => {
+            console.log(document.querySelector("#helper").style);
+            document.querySelector("#helper").style.opacity = "1";
+        }, 700);
+    },
+}
+
 
 
 </script>
 
 
 <style scoped>
+
+#helper{
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+    box-shadow: 0px 0px 5px 1px lightgrey;
+    padding: 1rem 2rem 2rem 2rem;
+    animation: helperAnimation .5s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+@keyframes helperAnimation{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(10px);
+    }
+}
+
+.arrow_icon{
+    display: block;
+    transform: scale(.5);
+    margin-left: 2rem;
+}
+
 #form {
     width: 30vw;
     height: auto;

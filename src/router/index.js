@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Quote from '@/components/Quote'
-import Pagina from '@/components/Pagina2'
+import Library from '@/components/Library'
 import Login from '@/components/Login'
 
 Vue.use(Router)
@@ -14,9 +14,9 @@ export default new Router({
       component: Quote,
     },
     {
-      path: '/pagina2',
-      name: 'Pagina2',
-      component: Pagina,
+      path: '/library',
+      name: 'Library',
+      component: Library,
     },{
       path: '/login',
       name: 'login',

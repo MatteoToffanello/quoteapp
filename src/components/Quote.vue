@@ -50,7 +50,7 @@ export default {
   methods: {
     setTransition() {
       this.$emit("setCurTransition", this.transitionNames.SCROLL_DOWN);
-      this.$router.push('/pagina2');
+      this.$router.push('/library');
     }
   },
   mounted() {
