@@ -1,27 +1,32 @@
 <template>
 
-    <div>
+    <div class="row">
         <div id="helper">
             <img src="../assets/arrow_icon.png" alt="" class="arrow_icon">
-            Click here to go back
+            Click to go back
         </div>
 
-        <div id="form">
-
-            <h2>LOGIN</h2>
-
-            <label for="email">
-                EMAIL
-                <input type="email" name="email" id="email">
-            </label>
-            <label for="psw">
-                PASSWORD
-                <input type="password" name="psw" id="psw">
-            </label>
-
-            <button id="login_btn">Log In</button>
+        <div class="col" id="firstCol">
 
         </div>
+
+        <div class="col">
+            <div id="form">
+
+                <h3>Welcome</h3>
+
+                <label for="email">
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                </label>
+                <label for="psw">
+                    <input type="password" name="psw" id="psw" placeholder="Enter your password">
+                </label>
+
+                <button id="login_btn">Log In</button>
+
+            </div>
+        </div>
+
     </div>
 
     
@@ -52,31 +57,37 @@ export default {
 
 #helper{
     position: absolute;
-    top: 5rem;
-    left: 2rem;
-    box-shadow: 0px 0px 5px 1px lightgrey;
-    padding: 1rem 2rem 2rem 2rem;
+    top: .5rem;
+    left: 10rem;
+    padding-top: .6rem;
     animation: helperAnimation .5s ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     border-radius: 5px;
     opacity: 0;
     transition: opacity .5s;
+    height: 5vh;
+    width: auto;
+    font-size: .7rem
+}
+
+#firstCol{
+    border-right: solid 1px lightgrey;
 }
 
 @keyframes helperAnimation{
     from{
-        transform: translateY(0px);
+        transform: scale(1)
     }
     to{
-        transform: translateY(10px);
+        transform: scale(1.05)
     }
 }
 
 .arrow_icon{
-    display: block;
-    transform: scale(.5);
-    margin-left: 2rem;
+    display: inline-block;
+    transform: scale(.3) rotate(-90deg) translateX(.2rem);
+    margin-left: 0rem;
 }
 
 #form {
@@ -84,8 +95,8 @@ export default {
     height: auto;
     margin: 40vh auto;
     transform: translateY(-50%);
-    border: solid 1px lightgrey;
     padding: 3rem;
+    font-size: .8rem;
 }
 
 h2{
@@ -106,7 +117,7 @@ input{
     margin-left: auto;
     margin-right: auto;
     line-height: 30px;
-    text-align: center;
+    text-align: left;
     width: 70%;
     transition: .2s ease-in-out;
 }

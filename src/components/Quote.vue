@@ -4,8 +4,8 @@
     <div class="row align-items-center">
 
       <div class="col-lg-4 ">
-        <span id="title_1" class="fs-1"> UN <b>LUOGO</b> IN CUI PUOI </span> <span id="pensare"
-          class="fs-1">PENSARE</span>
+        <span id="title_1" class="fs-2"> UN <b>LUOGO</b> IN CUI PUOI </span> <span id="pensare"
+          class="fs-1">IMMAGINARE</span>
       </div>
       <div class="col-lg-7">
       </div>
@@ -86,7 +86,7 @@ body {
 .row:nth-child(2) {
   height: 30vh;
   text-align: left;
-  margin-top: -3rem;
+  margin-top: -6rem;
   color: #2c3e50 !important;
   background-color: white;
   border-radius: 20px;
@@ -98,7 +98,7 @@ body {
 }
 
 #quote {
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   text-decoration: underline rgba(255, 234, 0, 0.555);
 }
 
